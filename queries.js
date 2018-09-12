@@ -3,6 +3,9 @@ const database = require('knex')(connection)
 
 module.exports = {
     listAll(){
-        return       
+        return g95db('students')       
+    },
+    read(firstName){
+        return firstName
     }
 }
