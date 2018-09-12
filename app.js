@@ -1,9 +1,10 @@
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8000;
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 8000
+const queries = require('./queries')
 
 app.get('/', (Request, Response) => {
-    Response.send('the route is working!')
+    queries.listAll().then(students => res.send(students))
 })
 
 

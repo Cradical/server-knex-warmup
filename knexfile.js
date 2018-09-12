@@ -1,5 +1,6 @@
 // Update with your config settings.
 
+
 module.exports = {
 
   development: {
@@ -16,9 +17,3 @@ module.exports = {
   }
 
 };
-
-// connection: {
-//   database: 'postgres://data-api-dev',
-//   user:     '',
-//   password: ''
-// },

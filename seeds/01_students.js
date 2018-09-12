@@ -4,7 +4,8 @@ exports.seed = function (knex, Promise) {
     .then(function () {
       // Inserts seed entries
       return knex('table_name').insert([{
-          firstName: "Kevin', lastName: 'Potts",
+          firstName: 'Kevin', 
+          lastName: 'Potts',
           hometown: 'OC',
           prevOccupation: 'Skydiver',
           favoriteNum: 13,
@@ -29,9 +30,9 @@ exports.seed = function (knex, Promise) {
         {
           firstName: 'Conrad',
           lastName: 'Wright',
-          homeTown: 'Durango',
-          preOccupation: 'Rural Development Consultant',
-          favNumber: 'infinity',
+          hometown: 'Durango',
+          prevOccupation: 'Rural Development Consultant',
+          favoriteNum: '007',
           pastime: 'Bird Watching'
         },
         {
@@ -47,7 +48,7 @@ exports.seed = function (knex, Promise) {
           lastName: 'Stricklin',
           hometown: 'San German',
           prevOccupation: 'Retail',
-          faveNum: 4,
+          favoriteNum: 4,
           pastime: 'Shakespearean Elocution'
         },
         {
