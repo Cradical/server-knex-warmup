@@ -2,19 +2,23 @@ const express = require('express')
 const app = express()
 const port = process.env.PORT || 8000
 const queries = require('./queries')
+const cors = cor
 
 app.get('/', (Request, Response) => {
-    queries.listAll().then(students => res.send(students))
+    queries.listAll().then(students => Response.send(students))
 })
 
 app.get('/:firstName', (Request, Response) => {
-    read(Request.params.firstName)
+    queries.read(Request.params.firstName).then(student => Response.json({student}))
 })
 
 app.post('/', (Request, Response) => {
-    queries.create(Request.body).then(Response.status(201))
-})
+    queries.create(Request.body).then(status => Response.json({status})
+)})
 
+app.delete('/:id', (Request, Response) => {
+    queries.delete(Request.params.id).then(status => Response.status({status}))
+})
 
 app.listen(port, (Request, Response) => {
     console.log(`listening on ${port}`)
