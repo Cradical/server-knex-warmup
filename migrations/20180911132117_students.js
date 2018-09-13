@@ -5,9 +5,9 @@ exports.up = function(knex, Promise) {
         student.increments('id');
         student.string('firstName');
         student.string('lastName');
-        student.string('homeTown');
-        student.string('preOccupation');
-        student.integer('favNumber');
+        student.string('hometown');
+        student.string('prevOccupation');
+        student.float('favoriteNum');
         student.string('pastime');
 
     })

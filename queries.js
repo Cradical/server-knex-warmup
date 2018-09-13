@@ -3,9 +3,12 @@ const database = require('knex')(connection)
 
 module.exports = {
     listAll(){
-        return g95db('students')       
+        return database('students')       
     },
     read(firstName){
         return firstName
+    },
+    create(newEntry){
+        return database('students').insert(newEntry).returning('*');
     }
 }
